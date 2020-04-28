@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FormulirBooking">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="162dp"
+                app:cardBackgroundColor="#87D5A7"
+                app:cardCornerRadius="0dp"
+                app:cardElevation="0dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="352dp"
+                    android:layout_height="130dp"
+                    android:layout_margin="20dp"
+                    app:cardCornerRadius="30dp"
+                    app:cardElevation="0dp">
+
+                    <Button
+
+                        android:layout_width="352dp"
+                        android:layout_height="146dp"
+                        android:layout_gravity="center"
+                        android:background="#B595D4E8"
+                        android:drawableLeft="@drawable/icon_sepakbola"
+                        android:text="AYO FUTSAL" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="351dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="20dp"
+                        app:cardBackgroundColor="#000"
+                        app:cardCornerRadius="15dp">
+
+
+                    </androidx.cardview.widget.CardView>
+                </androidx.cardview.widget.CardView>
+
+            </androidx.cardview.widget.CardView>
+
+         <androidx.cardview.widget.CardView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             app:cardBackgroundColor="#fff"
+             >
+
+
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="30dp"
+
+                android:columnCount="2"
+                android:rowCount="5">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Username"
+                    android:textSize="20dp"
+                    android:layout_marginTop="10dp"
+                    >
+
+                </TextView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="50dp"
+                    app:cardCornerRadius="10dp">
+
+                    <EditText
+                        android:id="@+id/inpUsername"
+                        android:layout_width="250dp"
+                        android:layout_height="50dp"
+                        android:hint="username"
+                        android:background="@null">
+
+                    </EditText>
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lapangan"
+                    android:textSize="20dp"
+                    android:layout_marginTop="30dp"
+                    >
+
+                </TextView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="20dp"
+                    app:cardCornerRadius="10dp">
+
+
+                    <EditText
+                        android:id="@+id/inpLapangan"
+                        android:layout_width="250dp"
+                        android:layout_height="50dp"
+                        android:hint="Kode Lapangan '2'"
+                        android:background="@null"
+                        android:inputType="number"
+                        >
+
+                    </EditText>
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jam Mulai"
+                    android:textSize="20dp"
+                    android:layout_marginTop="30dp"
+                    >
+
+                </TextView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="20dp"
+                    app:cardCornerRadius="10dp">
+
+
+                    <EditText
+                        android:id="@+id/inpMulai"
+                        android:layout_width="250dp"
+                        android:layout_height="50dp"
+                        android:hint="Jam Mulai ('19:00')"
+                        android:inputType="time"
+                        android:background="@null"
+                        >
+
+                    </EditText>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jam Selesai"
+                    android:textSize="20dp"
+                    android:layout_marginTop="30dp"
+                    >
+
+                </TextView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="20dp"
+                    app:cardCornerRadius="10dp">
+
+
+                    <EditText
+                        android:id="@+id/inpSelesai"
+                        android:layout_width="250dp"
+                        android:layout_height="50dp"
+                        android:background="@null"
+                        android:inputType="time"
+                        android:hint="Jam Selesai ('20:00')">
+
+                    </EditText>
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tanggal"
+                    android:textSize="20dp"
+                    android:layout_marginTop="30dp"
+                    >
+
+                </TextView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="20dp"
+                    app:cardCornerRadius="10dp">
+
+
+                    <EditText
+                        android:id="@+id/inpTanggal"
+                        android:layout_width="250dp"
+                        android:layout_height="50dp"
+                        android:background="@null"
+                        android:hint="Tanggal ('31/12/2020')"
+                        android:inputType="date">
+
+                    </EditText>
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Catatan"
+                    android:textSize="20dp"
+                    android:layout_marginTop="30dp"
+                    >
+
+                </TextView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="20dp"
+                    app:cardCornerRadius="10dp">
+
+
+                    <EditText
+                        android:id="@+id/inpCatatan"
+                        android:layout_width="250dp"
+                        android:layout_height="100dp"
+                        android:background="@null"
+                        android:hint="Catatan">
+
+                    </EditText>
+
+                </androidx.cardview.widget.CardView>
+            </GridLayout>
+         </androidx.cardview.widget.CardView>
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="3"
+                android:rowCount="1"
+                android:paddingBottom="30dp"
+
+                >
+                <Button
+                    android:id="@+id/btnAdd"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:background="#B5CFB9F6"
+                    android:text="Simpan"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="45dp"
+                    >
+
+                </Button>
+                <Button
+                    android:id="@+id/btnEdit"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:background="#B5CFB9F6"
+                    android:text="Edit"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="30dp"
+                    >
+
+                </Button>
+                <Button
+                    android:id="@+id/btnView"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:background="#B5CFB9F6"
+                    android:text="Lihat"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="30dp"
+                    >
+
+                </Button>
+
+
+            </GridLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
