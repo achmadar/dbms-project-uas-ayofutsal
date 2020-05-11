@@ -21,7 +21,7 @@ if ($num>0) {
 		extract($row);
 		$pemesanan_item = array(
 			"id_pesanan"=>$id_pesanan,
-			"id_user"=> $id_user,
+			"nama"=> $nama,
 			"lapangan"=> $lapangan,
 			"mulai_jam"=> $mulai_jam,
 			"selesai_jam"=> $selesai_jam,

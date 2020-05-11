@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 09 Apr 2020 pada 10.49
+-- Waktu pembuatan: 11 Bulan Mei 2020 pada 07.55
 -- Versi server: 10.4.11-MariaDB
 -- Versi PHP: 7.4.1
 
@@ -131,8 +131,10 @@ CREATE TABLE `tbl_lapangan` (
 --
 
 INSERT INTO `tbl_lapangan` (`id_lap`, `name`, `status`) VALUES
-(1, 'Lapangan 1', 'Rumput Vinyl, AC'),
-(2, 'Lapangan 2', 'Rumput Sintetis, Kipas, Papan Nomor');
+(1, 'Lapangan 1', 'Jenis Sintetis, Scoreboard, Kipas'),
+(2, 'Lapangan 2', 'Jenis Plester, Scoreboard, Kipas'),
+(3, 'Lapangan 3', 'Jenis Sintetis'),
+(4, 'Lapangan 4', 'Jenis Plester');
 
 --
 -- Trigger `tbl_lapangan`
@@ -150,8 +152,8 @@ DELIMITER ;
 
 CREATE TABLE `tbl_pemesanan` (
   `id_pesanan` int(255) NOT NULL,
-  `id_user` int(255) NOT NULL,
-  `lapangan` int(255) NOT NULL,
+  `nama` varchar(255) NOT NULL,
+  `lapangan` varchar(255) NOT NULL,
   `mulai_jam` time NOT NULL,
   `selesai_jam` time NOT NULL,
   `tanggal` date NOT NULL,
@@ -163,9 +165,11 @@ CREATE TABLE `tbl_pemesanan` (
 -- Dumping data untuk tabel `tbl_pemesanan`
 --
 
-INSERT INTO `tbl_pemesanan` (`id_pesanan`, `id_user`, `lapangan`, `mulai_jam`, `selesai_jam`, `tanggal`, `catatan`, `status_bayar`) VALUES
-(3, 3, 1, '00:00:14', '00:00:15', '2020-11-01', 'coba', 'lunas'),
-(4, 4, 2, '10:00:00', '12:00:00', '2020-03-11', 'Tolong Mas', '');
+INSERT INTO `tbl_pemesanan` (`id_pesanan`, `nama`, `lapangan`, `mulai_jam`, `selesai_jam`, `tanggal`, `catatan`, `status_bayar`) VALUES
+(3, 'Tirjo', '1', '00:00:14', '00:00:15', '2020-11-01', 'coba', 'lunas'),
+(4, 'Beta', '2', '10:00:00', '12:00:00', '2020-03-11', 'Tolong Mas', 'lunas'),
+(9, 'jarwo', '1', '19:00:00', '20:00:00', '2020-05-12', 'coba', 'menunggu'),
+(10, 'Pakndul', '4', '07:00:00', '08:00:00', '2020-06-11', 'Core of the core', 'menunggu');
 
 --
 -- Trigger `tbl_pemesanan`
@@ -232,7 +236,27 @@ INSERT INTO `update_log` (`aksi`, `status`, `id`, `tanggal`, `waktu`) VALUES
 ('UPD-lapangan', 'Rumput Vinyl, Papan Skor', 1, '0000-00-00', '2020-03-10 19:56:02'),
 ('UPD-lapangan', 'Rumput Vinyl, AC', 1, '2020-03-10', '2020-03-10 19:58:03'),
 ('UPD-pesanan', ' ', 3, '2020-11-01', '2020-03-10 20:01:44'),
-('DEL-pesanan', 'Batal', 2, '0000-00-00', '2020-03-10 20:17:34');
+('DEL-pesanan', 'Batal', 2, '0000-00-00', '2020-03-10 20:17:34'),
+('UPD-lapangan', '', 1, '2020-04-14', '2020-04-14 15:05:19'),
+('UPD-lapangan', '', 2, '2020-04-14', '2020-04-14 15:05:19'),
+('UPD-lapangan', 'Sintetis, Scoreboard, Kipas', 1, '2020-05-10', '2020-05-10 22:40:20'),
+('UPD-lapangan', 'Plester, Scoreboard, Kipas', 2, '2020-05-10', '2020-05-10 22:40:57'),
+('UPD-lapangan', 'Jenis Sintetis, Scoreboard, Kipas', 1, '2020-05-10', '2020-05-10 22:41:11'),
+('UPD-lapangan', 'Jenis Plester, Scoreboard, Kipas', 2, '2020-05-10', '2020-05-10 22:41:22'),
+('UPD-pesanan', 'menunggu', 4, '2020-03-11', '2020-05-11 11:27:52'),
+('UPD-pesanan', 'lunas', 4, '2020-03-11', '2020-05-11 11:31:10'),
+('INS-pesanan', ' ', 5, '0000-00-00', '2020-05-11 12:28:53'),
+('INS-pesanan', ' ', 6, '0000-00-00', '2020-05-11 12:30:26'),
+('UPD-pesanan', 'lunas', 3, '2020-11-01', '2020-05-11 12:31:54'),
+('UPD-pesanan', 'lunas', 4, '2020-03-11', '2020-05-11 12:32:15'),
+('DEL-pesanan', 'Batal', 5, '0000-00-00', '2020-05-11 12:32:25'),
+('DEL-pesanan', 'Batal', 6, '0000-00-00', '2020-05-11 12:32:26'),
+('INS-pesanan', ' ', 7, '0000-00-00', '2020-05-11 12:33:31'),
+('INS-pesanan', ' ', 8, '0000-00-00', '2020-05-11 12:35:01'),
+('INS-pesanan', ' ', 9, '2020-05-12', '2020-05-11 12:37:33'),
+('DEL-pesanan', 'Batal', 7, '0000-00-00', '2020-05-11 12:37:54'),
+('DEL-pesanan', 'Batal', 8, '0000-00-00', '2020-05-11 12:37:54'),
+('INS-pesanan', ' ', 10, '2020-06-11', '2020-05-11 12:46:56');
 
 --
 -- Indexes for dumped tables
@@ -254,9 +278,7 @@ ALTER TABLE `tbl_lapangan`
 -- Indeks untuk tabel `tbl_pemesanan`
 --
 ALTER TABLE `tbl_pemesanan`
-  ADD PRIMARY KEY (`id_pesanan`),
-  ADD KEY `id_user` (`id_user`),
-  ADD KEY `lapangan` (`lapangan`);
+  ADD PRIMARY KEY (`id_pesanan`);
 
 --
 -- Indeks untuk tabel `tbl_user`
@@ -278,30 +300,19 @@ ALTER TABLE `tbl_admin`
 -- AUTO_INCREMENT untuk tabel `tbl_lapangan`
 --
 ALTER TABLE `tbl_lapangan`
-  MODIFY `id_lap` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_lap` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT untuk tabel `tbl_pemesanan`
 --
 ALTER TABLE `tbl_pemesanan`
-  MODIFY `id_pesanan` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_pesanan` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT untuk tabel `tbl_user`
 --
 ALTER TABLE `tbl_user`
   MODIFY `id_user` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
---
-
---
--- Ketidakleluasaan untuk tabel `tbl_pemesanan`
---
-ALTER TABLE `tbl_pemesanan`
-  ADD CONSTRAINT `tbl_pemesanan_ibfk_1` FOREIGN KEY (`lapangan`) REFERENCES `tbl_lapangan` (`id_lap`),
-  ADD CONSTRAINT `tbl_pemesanan_ibfk_2` FOREIGN KEY (`id_user`) REFERENCES `tbl_user` (`id_user`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

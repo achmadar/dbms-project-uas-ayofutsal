@@ -8,7 +8,7 @@ class Pemesanan
 	private $table_name = "tbl_pemesanan";
 
 	public $id_pesanan;
-	public $id_user;
+	public $nama;
 	public $lapangan;
 	public $mulai_jam;
 	public $selesai_jam;
@@ -21,7 +21,7 @@ class Pemesanan
 	}
 
 	function read(){
-		$query = " SELECT * FROM " . $this->table_name;
+		$query = " SELECT * FROM " . $this->table_name . " ORDER BY tanggal DESC ";
 
 		$stmt = $this->conn->prepare($query);
 
@@ -31,11 +31,11 @@ class Pemesanan
 
 	function create()
 	{
-		$query = "INSERT INTO " . $this -> table_name. " SET id_user=:id_user, mulai_jam=:mulai_jam, lapangan=:lapangan,selesai_jam=:selesai_jam, tanggal=:tanggal, catatan=:catatan, status_bayar=:status_bayar";
+		$query = "INSERT INTO " . $this -> table_name. " SET nama=:nama, mulai_jam=:mulai_jam, lapangan=:lapangan,selesai_jam=:selesai_jam, tanggal=:tanggal, catatan=:catatan, status_bayar=:status_bayar";
 
 		$stmt = $this->conn->prepare($query);
 
-		$this->id_user=htmlspecialchars(strip_tags($this->id_user));
+		$this->nama=htmlspecialchars(strip_tags($this->nama));
 		$this->mulai_jam=htmlspecialchars(strip_tags($this->mulai_jam));
 		$this->lapangan=htmlspecialchars(strip_tags($this->lapangan));
 		$this->selesai_jam=htmlspecialchars(strip_tags($this->selesai_jam));
@@ -43,7 +43,7 @@ class Pemesanan
 		$this->catatan=htmlspecialchars(strip_tags($this->catatan));
 		$this->status_bayar=htmlspecialchars(strip_tags($this->status_bayar));
 
-		$stmt->bindParam(":id_user",$this->id_user);
+		$stmt->bindParam(":nama",$this->nama);
 		$stmt->bindParam(":mulai_jam",$this->mulai_jam);
 		$stmt->bindParam(":lapangan",$this->lapangan);
 		$stmt->bindParam(":selesai_jam",$this->selesai_jam);
@@ -60,10 +60,10 @@ class Pemesanan
 
 	function update()
 	{
-		$query = "UPDATE " . $this -> table_name . " SET id_user=:id_user, mulai_jam=:mulai_jam, lapangan=:lapangan,selesai_jam=:selesai_jam, tanggal=:tanggal, catatan=:catatan, status_bayar=:status_bayar WHERE id_pesanan=:id_pesanan";
+		$query = "UPDATE " . $this -> table_name . " SET nama=:nama, mulai_jam=:mulai_jam, lapangan=:lapangan,selesai_jam=:selesai_jam, tanggal=:tanggal, catatan=:catatan, status_bayar=:status_bayar WHERE id_pesanan=:id_pesanan";
 		$stmt = $this->conn->prepare($query);
 
-		$this->id_user=htmlspecialchars(strip_tags($this->id_user));
+		$this->nama=htmlspecialchars(strip_tags($this->nama));
 		$this->mulai_jam=htmlspecialchars(strip_tags($this->mulai_jam));
 		$this->lapangan=htmlspecialchars(strip_tags($this->lapangan));
 		$this->selesai_jam=htmlspecialchars(strip_tags($this->selesai_jam));
@@ -71,7 +71,7 @@ class Pemesanan
 		$this->catatan=htmlspecialchars(strip_tags($this->catatan));
 		$this->status_bayar=htmlspecialchars(strip_tags($this->status_bayar));
 
-		$stmt->bindParam(":id_user",$this->id_user);
+		$stmt->bindParam(":nama",$this->nama);
 		$stmt->bindParam(":mulai_jam",$this->mulai_jam);
 		$stmt->bindParam(":lapangan",$this->lapangan);
 		$stmt->bindParam(":selesai_jam",$this->selesai_jam);

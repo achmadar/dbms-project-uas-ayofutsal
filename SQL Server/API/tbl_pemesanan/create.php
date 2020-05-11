@@ -17,7 +17,7 @@ $data =
 json_decode (file_get_contents("php://input"));
 
 if(
-	!empty($data->id_user) &&
+	!empty($data->nama) &&
 	!empty($data->lapangan) &&
 	!empty($data->mulai_jam) &&
 	!empty($data->selesai_jam) &&
@@ -25,7 +25,7 @@ if(
 	!empty($data->catatan) &&
 	!empty($data->status_bayar)
 ){
-	$pemesanan->id_user = $data->id_user;
+	$pemesanan->nama = $data->nama;
 	$pemesanan->lapangan = $data->lapangan;
 	$pemesanan->mulai_jam = $data->mulai_jam;
 	$pemesanan->selesai_jam = $data->selesai_jam;
@@ -35,16 +35,16 @@ if(
 
 	if ($pemesanan -> create()) {
 		http_response_code(201);
-		echo json_encode(array("Message" => "pemesanan was created" ));
+		echo json_encode(array("Message" => "Pesanan Telah Dibuat" ));
 	}
 	else{
 		http_response_code(503);
-		echo json_encode(array("Message" => "Unable to create pemesanan" ));
+		echo json_encode(array("Message" => "Unable to create pesanan" ));
 	}
 }
 else{
 	http_response_code(400);
-	echo json_encode(array("Message" => "Unable to create pemesanan. Data is incomplete"));
+	echo json_encode(array("Message" => "Isikan data dengan benar"));
 }
 
 ?>

@@ -18,7 +18,7 @@ json_decode (file_get_contents("php://input"));
 {
 	$pemesanan->id_pesanan = $data->id_pesanan;
   
-	$pemesanan->id_user = $data->id_user;
+	$pemesanan->nama = $data->nama;
 	$pemesanan->lapangan = $data->lapangan;
 	$pemesanan->mulai_jam = $data->mulai_jam;
 	$pemesanan->selesai_jam = $data->selesai_jam;
