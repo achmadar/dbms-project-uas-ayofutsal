@@ -84,6 +84,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:gravity="center"
+                android:textColor="#000"
                 android:text="Silahkan Mengedit User"
                 android:textSize="20dp">
 
@@ -102,6 +103,7 @@
                     android:layout_width="110dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
+                    android:textColor="#000"
                     android:text="Nama         :"
                     android:textSize="20dp"
                     >
@@ -113,6 +115,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="25dp"
                     android:textSize="20dp"
+                    android:textColor="#000"
                     android:hint="Isi Nama"
                     android:background="#fff"
                     android:gravity="center"
@@ -124,6 +127,7 @@
                     android:layout_width="110dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
+                    android:textColor="#000"
                     android:text="No. HP       : "
                     android:textSize="20dp"
                     >
@@ -135,6 +139,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:background="#fff"
+                    android:textColor="#000"
                     android:hint="Isi No HP"
                     android:textSize="20dp"
                     android:gravity="center"
@@ -146,6 +151,7 @@
                     android:layout_width="110dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
+                    android:textColor="#000"
                     android:text="Alamat      : "
                     android:textSize="20dp"
                     >
@@ -156,6 +162,7 @@
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
+                    android:textColor="#000"
                     android:hint="Isi Alamat"
                     android:textSize="20dp"
                     android:background="#fff"
@@ -168,6 +175,7 @@
                     android:layout_width="110dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
+                    android:textColor="#000"
                     android:text="Username :"
                     android:textSize="20dp"
                     >
@@ -179,6 +187,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:hint="Isi Username"
+                    android:textColor="#000"
                     android:textSize="20dp"
                     android:background="#fff"
                     android:gravity="center"
@@ -190,6 +199,7 @@
                     android:layout_width="110dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
+                    android:textColor="#000"
                     android:text="Password :"
                     android:textSize="20dp"
                     >
@@ -200,6 +210,7 @@
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
+                    android:textColor="#000"
                     android:hint="Isi Password"
                     android:textSize="20dp"
                     android:inputType="textPassword"

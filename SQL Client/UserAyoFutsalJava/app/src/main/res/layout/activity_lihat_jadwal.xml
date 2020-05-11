@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,13 +7,6 @@
     android:orientation="vertical"
     android:background="@drawable/bg1"
     tools:context=".LihatJadwal">
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="180dp"
-        android:orientation="vertical">
-
 
         <androidx.cardview.widget.CardView
             android:layout_width="352dp"
@@ -45,25 +38,29 @@
         </androidx.cardview.widget.CardView>
 
 
-        <SearchView
-            android:layout_width="match_parent"
-            android:layout_height="64dp"
-            android:background="@color/cardview_shadow_start_color">
+<!--        <SearchView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="64dp"-->
+<!--            android:background="@color/cardview_shadow_start_color">-->
 
-        </SearchView>
+<!--        </SearchView>-->
+
+        <Button
+            android:id="@+id/buttonSync"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#000"
+            android:layout_margin="10dp"
+            android:textColor="#fff"
+            android:text="Sync / Refresh" />
 
         <ListView
-            android:id="@+id/list_jadwal"
+            android:id="@+id/listViewPemesanan"
             android:layout_width="match_parent"
-            android:layout_height="500dp"
-            android:layout_marginTop="10dp">
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginBottom="30dp">
 
         </ListView>
 
-
-
-
     </LinearLayout>
-
-
-</ScrollView>

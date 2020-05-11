@@ -55,14 +55,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button btn_edit = (Button)findViewById(R.id.btn_edit);
-        btn_edit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent btn_edit = new Intent(MainActivity.this, EditUser.class);
-                startActivity(btn_edit);
-            }
-        });
+//        Button btn_edit = (Button)findViewById(R.id.btn_edit);
+//        btn_edit.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent btn_edit = new Intent(MainActivity.this, EditUser.class);
+//                startActivity(btn_edit);
+//            }
+//        });
 
     }
 

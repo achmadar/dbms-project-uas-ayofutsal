@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/cardview_shadow_start_color"
+    android:orientation="vertical"
+    android:background="@drawable/bg1"
     tools:context=".MenuLapangan">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="180dp"
-        android:orientation="vertical">
-
 
         <androidx.cardview.widget.CardView
             android:layout_width="352dp"
@@ -43,72 +38,88 @@
         </androidx.cardview.widget.CardView>
 
 
-        <FrameLayout
-            android:layout_width="391dp"
-            android:layout_height="152dp"
-            android:layout_gravity="center"
-            android:background="@drawable/sm3">
+<!--        <FrameLayout-->
+<!--            android:layout_width="391dp"-->
+<!--            android:layout_height="152dp"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:background="@drawable/sm3">-->
 
-        </FrameLayout>
+<!--        </FrameLayout>-->
+
+<!--        <Button-->
+<!--            android:layout_width="397dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="LAPANGAN 1 : SINTETIS"-->
+<!--            android:layout_gravity="center">-->
+
+<!--        </Button>-->
+
+
+<!--        <FrameLayout-->
+<!--            android:layout_width="391dp"-->
+<!--            android:layout_height="152dp"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:background="@drawable/sm4">-->
+
+<!--        </FrameLayout>-->
+
+<!--        <Button-->
+<!--            android:layout_width="397dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="LAPANGAN 2 : PLESTER"-->
+<!--            android:layout_gravity="center">-->
+
+<!--        </Button>-->
+
+
+<!--        <FrameLayout-->
+<!--            android:layout_width="391dp"-->
+<!--            android:layout_height="152dp"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:background="@drawable/sm51">-->
+
+<!--        </FrameLayout>-->
+
+<!--        <Button-->
+<!--            android:layout_width="397dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="LAPANGAN 3 : SINTETIS"-->
+<!--            android:layout_gravity="center">-->
+
+<!--        </Button>-->
+
+<!--        <FrameLayout-->
+<!--            android:layout_width="391dp"-->
+<!--            android:layout_height="152dp"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:background="@drawable/sm61">-->
+
+<!--        </FrameLayout>-->
+
+<!--        <Button-->
+<!--            android:layout_width="397dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="LAPANGAN 4 : PLESTER"-->
+<!--            android:layout_gravity="center">-->
+
+<!--        </Button>-->
 
         <Button
-            android:layout_width="397dp"
+            android:id="@+id/buttonSync2"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="LAPANGAN 1 : SINTETIS"
-            android:layout_gravity="center">
+            android:background="#000"
+            android:layout_margin="10dp"
+            android:textColor="#fff"
+            android:text="Sync / Refresh" />
 
-        </Button>
+        <ListView
+            android:id="@+id/listViewLapangan"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginBottom="30dp">
 
-
-        <FrameLayout
-            android:layout_width="391dp"
-            android:layout_height="152dp"
-            android:layout_gravity="center"
-            android:background="@drawable/sm4">
-
-        </FrameLayout>
-
-        <Button
-            android:layout_width="397dp"
-            android:layout_height="wrap_content"
-            android:text="LAPANGAN 2 : PLESTER"
-            android:layout_gravity="center">
-
-        </Button>
-
-
-        <FrameLayout
-            android:layout_width="391dp"
-            android:layout_height="152dp"
-            android:layout_gravity="center"
-            android:background="@drawable/sm51">
-
-        </FrameLayout>
-
-        <Button
-            android:layout_width="397dp"
-            android:layout_height="wrap_content"
-            android:text="LAPANGAN 3 : SINTETIS"
-            android:layout_gravity="center">
-
-        </Button>
-
-        <FrameLayout
-            android:layout_width="391dp"
-            android:layout_height="152dp"
-            android:layout_gravity="center"
-            android:background="@drawable/sm61">
-
-        </FrameLayout>
-
-        <Button
-            android:layout_width="397dp"
-            android:layout_height="wrap_content"
-            android:text="LAPANGAN 4 : PLESTER"
-            android:layout_gravity="center">
-
-        </Button>
+        </ListView>
 
     </LinearLayout>
-
-</ScrollView>
