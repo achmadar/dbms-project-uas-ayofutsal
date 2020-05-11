@@ -96,7 +96,7 @@
                     android:layout_gravity="center"
                     android:background="#B5CFB9F6"
                     android:drawableRight="@drawable/ic_chevron_right_black_24dp"
-                    android:text="Lihat Cara Pesan" />
+                    android:text="Cara Pesan" />
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
@@ -117,7 +117,7 @@
                     android:layout_gravity="center"
                     android:background="#B5CFB9F6"
                     android:drawableRight="@drawable/ic_chevron_right_black_24dp"
-                    android:text="Lihat Menu Lapangan" />
+                    android:text="Daftar Lapangan" />
             </androidx.cardview.widget.CardView>
 
 
@@ -138,7 +138,7 @@
                     android:layout_gravity="center"
                     android:background="#B5CFB9F6"
                     android:drawableRight="@drawable/ic_chevron_right_black_24dp"
-                    android:text="Booking" />
+                    android:text="Booking Lapangan" />
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView

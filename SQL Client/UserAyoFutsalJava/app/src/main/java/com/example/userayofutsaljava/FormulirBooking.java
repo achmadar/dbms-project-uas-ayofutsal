@@ -59,8 +59,6 @@ public class FormulirBooking extends AppCompatActivity {
                             inpCatatan.getText().toString()
                     );
                     new ApiConnect(FormulirBooking.this,pemesanan).execute(ApiConnect.INSERT_ACTION_PEMESANAN+"");
-                    Intent back = new Intent(FormulirBooking.this, MainActivity.class);
-                    startActivity(back);
                 }
             }
         );
