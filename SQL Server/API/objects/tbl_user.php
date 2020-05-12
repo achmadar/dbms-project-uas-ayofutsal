@@ -92,5 +92,29 @@ class User
 		return false;
 	}
 
+	function login()
+    {
+        $query = "CALL login_user(:username,:password)";
+
+        $stmt  = $this->conn->prepare($query);
+
+        // bind id of product to be updated
+        // sanitize
+        $this->username = htmlspecialchars(strip_tags($this->username));
+        $this->password = htmlspecialchars(strip_tags($this->password));
+
+        // bind the values
+        $stmt->bindParam(':username', $this->username);
+        $stmt->bindParam(':password', $this->password);
+
+        $stmt->execute();
+        // get retrieved row
+        $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        // set values to object properties
+        $this->id_user = $row['id_user'] ?? 0;
+        // $this->password_pengelola = $row['password_pengelola'];
+    }
+
 }
 ?>

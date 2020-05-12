@@ -95,10 +95,10 @@
                         <EditText
                             android:layout_width="200dp"
                             android:layout_height="40dp"
-                            android:hint="ID"
+                            android:hint="Username"
                             android:gravity="center"
                             android:textSize="20dp"
-                            android:id="@+id/LoginId"
+                            android:id="@+id/inpUsername"
                             android:background="@android:color/transparent"
                             >
 
@@ -122,7 +122,7 @@
                             android:gravity="center"
                             android:layout_gravity="center"
                             android:textSize="20dp"
-                            android:id="@+id/IdPassword"
+                            android:id="@+id/inpPassword"
                             >
 
                         </EditText>
@@ -134,7 +134,7 @@
                         android:layout_gravity="center"
                         android:layout_marginTop="30dp"
                         android:text="Login"
-                        android:id="@+id/login"
+                        android:id="@+id/btnlogin"
                         >
 
                     </Button>
